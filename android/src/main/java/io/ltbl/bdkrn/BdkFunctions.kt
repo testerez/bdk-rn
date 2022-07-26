@@ -74,13 +74,13 @@ object BdkFunctions {
     }
 
     fun createWallet(
-        mnemonic: String, password: String?, network: String?,
+        mnemonic: String?, password: String?, network: String?,
         blockChainConfigUrl: String, blockChainSocket5: String?,
         retry: String?, timeOut: String?, blockChainName: String?, descriptor: String = ""
     ): Map<String, Any?> {
         try {
             var newDescriptor = "";
-            if(descriptor == ""){
+            if(descriptor == "" && mnemonic != null){
                 val keyInfo = seed(true, mnemonic, password)
                 newDescriptor = createDefaultDescriptor(keyInfo.xprv);
             }

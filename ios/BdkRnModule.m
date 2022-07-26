@@ -13,7 +13,7 @@ RCT_EXTERN_METHOD(getLastUnusedAddress:(RCTPromiseResolveBlock)resolve reject:(R
 RCT_EXTERN_METHOD(getBalance:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 
 RCT_EXTERN_METHOD(
-    createWallet: (nonnull NSString*)mnemonic
+    createWallet: (NSString*)mnemonic
     password:(nonnull NSString *)password  
     network:(nonnull NSString *)network
     blockChainConfigUrl:(nonnull NSString *)blockChainConfigUrl
