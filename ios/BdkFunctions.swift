@@ -141,7 +141,7 @@ class BdkFunctions: NSObject {
     }
 
     func createWallet(
-        mnemonic: String,
+        mnemonic: String? = nil,
         password: String? = nil,
         network: String?,
         blockChainConfigUrl: String?,
